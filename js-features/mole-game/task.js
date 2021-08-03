@@ -12,15 +12,16 @@ clickHole.onclick = function() {
     } else {
         lost.textContent++;
     }
-
+   function clearStats() {
+    dead.textContent = 0;
+    lost.textContent = 0;
+   }
     if (dead.textContent == 10) {
-        dead.textContent = 0;
-        lost.textContent = 0;
         alert('Победа!');
+        clearStats()
     } else if (lost.textContent == 5) {
-        dead.textContent = 0;
-        lost.textContent = 0;
         alert('Вы проиграли!');
+        clearStats()
       }
     }
   }
